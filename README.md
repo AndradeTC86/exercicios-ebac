@@ -3,9 +3,11 @@ Exercicios realizados nos cursos ministrados pela EBAC
 
 ### Estrutura dos diretórios
 
+```
 |--- Full Stack 
 |--- Mobile
 |--- QA
+```
 
 #### Conteúdo das pastas
 
