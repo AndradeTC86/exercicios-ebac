@@ -106,3 +106,19 @@
     #economy .articles article a {
         background-color: #ff9f1a;
     }
+
+    #entertainment {
+        background-color: #f8a5c2;
+    }
+
+    #entertainment .articles article a {
+        background-color: #ff6b6b;
+    }
+
+    #technology {
+        background-color: #c7ecee;
+    }
+
+    #technology .articles article a {
+        background-color: #badc58;
+    }
