@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "sass": "^1.85.1"
+  },
+  "name": "exercicio-15---introducao-ao-sass",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "sass": "sass source/main.scss build/main.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "thiago.andrade",
+  "license": "ISC",
+  "description": ""
+}
