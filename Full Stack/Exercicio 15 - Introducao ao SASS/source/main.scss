@@ -63,7 +63,7 @@ header {
             font-weight: bold;
             color: variables.$corDeFundo;
 
-            &:hover{
+            &:hover {
                 background-color: darken(variables.$corSecundaria, 50%);
             }
         }
