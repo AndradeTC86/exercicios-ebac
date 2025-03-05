@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "gulp": "^5.0.0",
+    "gulp-cli": "^3.0.0"
+  },
+  "name": "exercicio-16---automatize-tarefas-com-gulp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "thiago.andrade",
+  "license": "ISC",
+  "description": ""
+}
