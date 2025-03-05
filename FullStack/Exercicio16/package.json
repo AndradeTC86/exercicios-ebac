@@ -2,8 +2,12 @@
   "dependencies": {
     "gulp": "^5.0.0",
     "gulp-cli": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-notify": "^5.0.0",
+    "gulp-obfuscate": "^0.2.9",
     "gulp-sass": "^6.0.1",
     "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
     "sass": "^1.85.1"
   },
   "name": "exercicio-16---automatize-tarefas-com-gulp",
