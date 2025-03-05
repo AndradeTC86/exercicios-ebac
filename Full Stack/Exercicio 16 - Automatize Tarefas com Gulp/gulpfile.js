@@ -1,18 +1,23 @@
 const gulp = require('gulp')
 
 function funcaoPadrao(callback) {
-    console.log('Executando via Gulp')
-    callback()
+    setTimeout(() => {        
+        console.log('Executando via Gulp')
+        callback()
+    }, 2000)
 }
 
 function dizOi(callback) {
-    console.log('Oi')
-    dizTchau()
-    callback()
+    setTimeout(() => {
+        console.log('Oi')
+        dizTchau()
+        callback()
+    }, 3000)
 }
 
 function dizTchau() {
     console.log('Tchau') 
 }
 
-exports.default = gulp.series(funcaoPadrao, dizOi)
+exports.parallel = gulp.parallel(funcaoPadrao, dizOi)
+exports.series = gulp.series(funcaoPadrao, dizOi)
