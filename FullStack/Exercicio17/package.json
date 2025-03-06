@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "less": "^4.2.2",
+    "less-watch-compiler": "^1.16.3"
+  },
+  "name": "exercicio17",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "less": "less-watch-compiler ./src/styles ./build/styles main.less",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "thiago.andrade",
+  "license": "ISC",
+  "description": ""
+}
