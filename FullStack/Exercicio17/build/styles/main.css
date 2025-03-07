@@ -11,10 +11,17 @@ body {
   background-color: #c7ecee;
   color: #535c68;
 }
+li {
+  list-style: none;
+}
 .container {
   max-width: 960px;
   width: 100%;
   margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 @media (max-width: 767px) {
   .container {
@@ -27,7 +34,7 @@ body {
   }
 }
 header {
-  padding: 24px;
+  padding-bottom: 24px;
 }
 header .profile-avatar {
   display: block;
@@ -56,12 +63,29 @@ header .profile-avatar {
   width: 100%;
   margin: 0 auto;
 }
-.social-links li {
-  list-style: none;
-}
 .social-links li img {
   transition: all ease 0.3s;
 }
 .social-links li img:hover {
   transform: scale(1.5);
+}
+.projects-list {
+  margin-top: 32px;
+}
+.projects-list-item a {
+  text-decoration: none;
+  background-color: #badc58;
+  display: block;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  text-align: center;
+  color: #535c68;
+  font-weight: bold;
+  border-radius: 30px;
+  border: 2px solid #badc58;
+  transition: all ease 0.5s;
+}
+.projects-list-item a:hover {
+  color: #badc58;
+  background-color: #535c68;
 }
