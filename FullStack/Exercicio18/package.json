@@ -5,6 +5,7 @@
     "grunt-concurrent": "^3.0.0",
     "grunt-contrib-less": "^3.0.0",
     "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0",
     "sass": "^1.85.1"
   },
   "name": "exercicio18",
