@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "grunt": "^1.6.1",
+    "grunt-cli": "^1.5.0"
+  },
+  "name": "exercicio18",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "grunt": "grunt",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "thiago.andrade",
+  "license": "ISC",
+  "description": ""
+}
