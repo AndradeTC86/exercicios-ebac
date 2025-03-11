@@ -4,18 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        button.btn-sucesso {
-            background-color: blue;
-        }
-
-        .btn-sucesso {
-            background-color: green;
-        }
-    </style>
+    <link rel="stylesheet" href="./smacss/base.css">
+    <link rel="stylesheet" href="./smacss/layout.css">
+    <link rel="stylesheet" href="./smacss/module.css">
+    <link rel="stylesheet" href="./tema-a.css">
 </head>
-<body>
-    <button class="btn-sucesso">Enviar mensagem</button> 
+<body class="tema-a">
     
+    <header>
+        <div class="container">
+            <h1 class="title">Boas práticas com SMACSS</h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Sobre
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Contato
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+    </header>
+
+    <div class="container">
+        <div class="accordion">
+            <header class="accordion-header">
+                Cabeçalho do Accordion
+            </header>
+            <p class="accordion-content">
+                Conteudo do Accordion
+            </p>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="mensagem mensagem-is-error">
+                <h5 class="mensagem-titulo">Descrição</h5>
+                <p class="mensagem-texto">Este é um exemplo de como utilizar o SMACSS em um projeto.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        const accordion = document.querySelectorAll('.accordion-header')
+        for (let i = 0; i < accordion.length; i++) {
+            accordion[i].addEventListener('click', function(evento) {
+               evento.target.parentNode.classList.toggle('is-open')
+            })
+        }
+    </script>
+
 </body>
 </html>
