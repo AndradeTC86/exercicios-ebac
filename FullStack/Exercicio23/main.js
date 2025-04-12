@@ -6,21 +6,25 @@ $(document).ready(function () {
 
     $(buscar).click(function () {
         const cep = $('#cep').val()
-        const endpoint = `https://viacep.com.br/ws/${cep}/json`
+        const endpoint = `https://viacep.com.br/ws/${cep}/json/resultado`
 
         $(buscar).find('i').addClass('d-none')
         $(buscar).find('span').removeClass('d-none')
 
-        $.ajax(endpoint).done(function (resposta) {
-            const logradouro = resposta.logradouro
-            const bairro = resposta.bairro
-            const cidade = resposta.localidade
-            const estado = resposta.uf
+        fetch(endpoint).then(response => {
+            return response.json()    
+        })
+        .then(data => {
+            const logradouro = data.logradouro
+            const bairro = data.bairro
+            const cidade = data.localidade
+            const estado = data.uf
             const endereco = `${logradouro}, ${bairro}, ${cidade} - ${estado}`
-            $('#endereco').val(endereco)
-
+            $('#endereco').val(endereco)            
+        })
+        setTimeout(() => {
             $(buscar).find('span').addClass('d-none')
             $(buscar).find('i').removeClass('d-none')
-        })   
+        })
     })    
 })
