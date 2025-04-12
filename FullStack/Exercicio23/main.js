@@ -1,44 +1,32 @@
-const buscar = $('#btn-buscar-cep')
+document.addEventListener("DOMContentLoaded", function () {
+    const username = 'AndradeTC86'
+    const url = `https://api.github.com/users/${username}`
 
-$(document).ready(function () {
+    const avatarElement = document.getElementById('avatar')
+    const nameElement = document.getElementById('name')
+    const usernameElement = document.getElementById('username')
+    const repositoriesElement = document.getElementById('repositories')
+    const followersElement = document.getElementById('followers')
+    const followingElement = document.getElementById('following')
+    const linkElement = document.getElementById('link')
 
-    $('#cep').mask('00000-000')
-
-    $(buscar).click(function () {
-        const cep = $('#cep').val()
-        const endpoint = `https://viacep.com.br/ws/${cep}/json/`
-
-        $(buscar).find('i').addClass('d-none')
-        $(buscar).find('span').removeClass('d-none')
-
-        fetch(endpoint)
+    fetch(url)
         .then(response => {
-            return response.json()    
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText)
+            }
+            return response.json()
         })
         .then(data => {
-            const logradouro = data.logradouro
-            const bairro = data.bairro
-            const cidade = data.localidade
-            const estado = data.uf
-            const endereco = `${logradouro}, ${bairro}, ${cidade} - ${estado}`
-            $('#endereco').val(endereco)
+            avatarElement.src = data.avatar_url
+            nameElement.innerText = data.name
+            usernameElement.innerText = data.login
+            repositoriesElement.innerText = data.public_repos
+            followersElement.innerText = data.followers
+            followingElement.innerText = data.following
+            linkElement.href = data.html_url
         })
-        .catch(error => {            
-            alert('Erro ao buscar o endereço, tente novamente mais tarde!')
+        .catch(error => {
+            console.error('There has been a problem with your fetch operation:', error)
         })
-        .finally(() => {
-            setTimeout(() => {
-                $(buscar).find('span').addClass('d-none')
-                $(buscar).find('i').removeClass('d-none')
-            })
-        })        
-    })
-    
-    $('#form-pedido').submit(function (event) {
-        event.preventDefault()
-
-        if ($('#nome').val().length == 0) {
-            throw new Error('O campo nome é obrigatório!')
-        }
-    })
 })
