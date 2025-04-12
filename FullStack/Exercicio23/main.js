@@ -32,5 +32,13 @@ $(document).ready(function () {
                 $(buscar).find('i').removeClass('d-none')
             })
         })        
-    })    
+    })
+    
+    $('#form-pedido').submit(function (event) {
+        event.preventDefault()
+
+        if ($('#nome').val().length == 0) {
+            throw new Error('O campo nome é obrigatório!')
+        }
+    })
 })
