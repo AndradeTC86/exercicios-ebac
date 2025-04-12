@@ -6,12 +6,13 @@ $(document).ready(function () {
 
     $(buscar).click(function () {
         const cep = $('#cep').val()
-        const endpoint = `https://viacep.com.br/ws/${cep}/json/resultado`
+        const endpoint = `https://viacep.com.br/ws/${cep}/json/`
 
         $(buscar).find('i').addClass('d-none')
         $(buscar).find('span').removeClass('d-none')
 
-        fetch(endpoint).then(response => {
+        fetch(endpoint)
+        .then(response => {
             return response.json()    
         })
         .then(data => {
@@ -20,11 +21,16 @@ $(document).ready(function () {
             const cidade = data.localidade
             const estado = data.uf
             const endereco = `${logradouro}, ${bairro}, ${cidade} - ${estado}`
-            $('#endereco').val(endereco)            
+            $('#endereco').val(endereco)
         })
-        setTimeout(() => {
-            $(buscar).find('span').addClass('d-none')
-            $(buscar).find('i').removeClass('d-none')
+        .catch(error => {            
+            alert('Erro ao buscar o endereço, tente novamente mais tarde!')
         })
+        .finally(() => {
+            setTimeout(() => {
+                $(buscar).find('span').addClass('d-none')
+                $(buscar).find('i').removeClass('d-none')
+            })
+        })        
     })    
 })
