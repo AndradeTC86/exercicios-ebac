@@ -1,63 +1,53 @@
-function Pessoa(nome) {
-    this.nome = nome
-    this.falar = function() {
-        console.log('Olá, meu nome é ' + this.nome)
-    }        
-}
-
-function Funcionario(nome, cargo, salario) {    
-    this.cargo = cargo
-    let _salario = salario
-    this.falarCargo = function() {
-        console.log('eu sou ' + this.cargo)
+function Animal(nome, cor, raca) {
+    let _nome = nome
+    let _cor = cor
+    let _raca = raca    
+    this.andar = function() {
+        console.log(`${this.getNome()} está andando`)
     }
 
-    Pessoa.call(this, nome)
-
-    this.getSalario = function() {
-        return _salario
+    this.getNome = function() {
+        return _nome
+    }
+    this.setNome = function(nome) {
+        _nome = nome
     }
 
-    this.setSalario = function(valor) {
-       if (typeof valor === 'number') {
-            _salario = valor
-        }
-        else {
-            console.log('Valor inválido')
-        }
+    this.getCor = function() {
+        return _cor
+    }
+    this.setCor = function(cor) {
+        _cor = cor
     }
 
-    this.setPromocao = function() {
-        const novoSalario = _salario * 1.1
-        _salario = novoSalario        
+    this.getRaca = function() {
+        return _raca
+    }
+    this.setRaca = function(raca) {
+        _raca = raca
     }
 }
 
-function Estagiario(nome) {
-    Funcionario.call(this, nome, 'Estagiário', 2000)
+function Cachorro(nome, cor, raca) {
+    Animal.call(this, nome, cor, raca)
 
-    this.setPromocao = function() {
-        const novoSalario = this.getSalario() * 1.07
-        this.setSalario(novoSalario)
+    this.latir = function() {
+        console.log(`${this.getNome()} está latindo`)
     }
 }
 
-function Gerente(nome) {
-    Funcionario.call(this, nome, 'Gerente', 10000)
+function Gato(nome, cor, raca) {
+    Animal.call(this, nome, cor, raca)
 
-    this.setPromocao = function() {
-        const novoSalario = this.getSalario() * 1.15
-        this.setSalario(novoSalario)
+    this.miar = function() {
+        console.log(`${this.getNome()} está miando`)
     }
 }
 
-const funcionario1 = new Funcionario('Maria', 'Desenvolvedora', 5000)
-const funcionario2 = new Estagiario('João')
-const funcionario3 = new Gerente('Carlos')
+const cachorro = new Cachorro('Bidu', 'azul', 'Labrador')
+const gato = new Gato('Mingau', 'branco', 'Siamês')
 
-funcionario1.setPromocao()
-console.log(funcionario1.getSalario())
-funcionario2.setPromocao()
-console.log(funcionario2.getSalario())
-funcionario3.setPromocao()
-console.log(funcionario3.getSalario())
+cachorro.andar()
+cachorro.latir()
+gato.andar()
+gato.miar()
