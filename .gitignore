@@ -1,1 +1,19 @@
 node_modules
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+*.pyc
+__pycache__/
+
+# IntelliJ IDEA
+*.iml
+.idea/
+out/
+
+# Android Studio (Kotlin/Java)
+*.iml
+.idea/
+build/
