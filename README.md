@@ -4,13 +4,11 @@ Exercicios realizados nos cursos ministrados pela EBAC
 ### Estrutura dos diretórios
 
 ```
-|--- Full Stack 
-|--- Mobile
+|--- FrontEnd 
 |--- QA
 ```
 
 #### Conteúdo das pastas
 
-- Full Stack: Exercícios do curso Profissão: Desenvolvedor Full Stack Python
-- Mobile: Exercícios do curso Profissão: Desenvolvedor Android Mobile & Back-end Python
+- FrontEnd: Exercícios da seção Front-End do curso Profissão: Desenvolvedor Full Stack Python
 - QA: Exercícios do curso Profissão: Engenheiro de Qualidade de Software
