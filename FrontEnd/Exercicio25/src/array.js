@@ -48,9 +48,7 @@ const titulares = selecionados.some(function(jogador){
 
 console.log(titulares)
 
-function jogadorDefesa(jogador) {
-    return jogador.posicao === 'Zagueiro'
-}
+const jogadorDefesa = jogador => jogador.posicao === 'Zagueiro'
 
 const defesa = selecionados.filter(jogadorDefesa)
 
