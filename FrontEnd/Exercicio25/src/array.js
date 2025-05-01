@@ -56,19 +56,9 @@ const defesa = selecionados.filter(jogadorDefesa)
 
 console.log(defesa)
 
-const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const penaltis = selecionados.reduce(function(total, jogador){
+    total += `${jogador.nome} `
+    return total
+}, ' ')
 
-const soma = numeros.reduce(function(acumulador, numero){
-    acumulador += numero
-    return acumulador
-}, 0)
-
-console.log(soma)
-
-let somaFor = 0
-
-for (let i = 0; i < numeros.length; i++) {
-    somaFor += numeros[i]
-}
-
-console.log(somaFor)
+console.log(penaltis)

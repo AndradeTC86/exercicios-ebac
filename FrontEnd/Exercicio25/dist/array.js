@@ -40,14 +40,8 @@ function jogadorDefesa(jogador) {
 }
 var defesa = selecionados.filter(jogadorDefesa);
 console.log(defesa);
-var numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-var soma = numeros.reduce(function (acumulador, numero) {
-  acumulador += numero;
-  return acumulador;
-}, 0);
-console.log(soma);
-var somaFor = 0;
-for (var _i = 0; _i < numeros.length; _i++) {
-  somaFor += numeros[_i];
-}
-console.log(somaFor);
+var penaltis = selecionados.reduce(function (total, jogador) {
+  total += "".concat(jogador.nome, " ");
+  return total;
+}, ' ');
+console.log(penaltis);
