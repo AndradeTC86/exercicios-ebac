@@ -35,9 +35,9 @@ var titulares = selecionados.some(function (jogador) {
   return jogador.posicao === 'Zagueiro';
 });
 console.log(titulares);
-function jogadorDefesa(jogador) {
+var jogadorDefesa = function jogadorDefesa(jogador) {
   return jogador.posicao === 'Zagueiro';
-}
+};
 var defesa = selecionados.filter(jogadorDefesa);
 console.log(defesa);
 var penaltis = selecionados.reduce(function (total, jogador) {
