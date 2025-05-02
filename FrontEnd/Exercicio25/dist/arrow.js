@@ -1,5 +1,6 @@
 "use strict";
 
+var _this = void 0;
 var arrow = function arrow() {
   return 'Testando arrow function';
 };
