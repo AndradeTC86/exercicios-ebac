@@ -1,3 +1,7 @@
 "use strict";
-let nome = 'Thiago';
-nome = 'Thiago Cesar Andrade';
+function multiplicacao(a, b) {
+    return a * b;
+}
+function saudacao(nome) {
+    return `Olá, ${nome}!`;
+}
